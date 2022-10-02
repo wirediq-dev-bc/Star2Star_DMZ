@@ -1,5 +1,32 @@
 # Star2Star_DMZ
 
+Set Star2Star MidDbrain DMZ firewall rules
+
+---
+On host machine save the following rules below to a `notepad` text document called `s2sdmz.txt`
+
+---
+Run the following to transfer file to MidBrain
+*Select the document in file explorer and click `Copy Path` to get the absolute path*
+```bash
+scp C:\\PATH\TO\s2sdmz.txt root@192.168.1.1:/root
+```
+
+SSH into the MidBrain and run the following commands:
+```bash
+# Cat the DMZ rules into /etc/config/firewall.
+# Make sure the there are double `>>`. 
+# A single `>` will overwrite the firewall configuration file.
+cat /root/s2sdmz.txt >> /etc/config/firewall
+
+# Reload the MidBrain firewall
+/etc/init.d/firewall reload
+```
+
+The MidBrain now has the required DMZ rules for Star2Star phones
+
+---
+## s2sdmz.txt
 ```txt
 
 config redirect
