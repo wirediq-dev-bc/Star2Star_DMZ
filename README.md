@@ -13,6 +13,7 @@ Run the following to transfer file to MidBrain
 ```bash
 scp C:\\PATH\TO\s2sdmz.txt root@192.168.1.1:/root
 ```
+![Star2Star DMZ SCP Command Example](/assets/s2s_dmz_scp.png)
 
 SSH into the MidBrain and run the following commands:
 ```bash
