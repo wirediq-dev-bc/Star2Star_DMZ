@@ -6,15 +6,18 @@ Set Star2Star MidDbrain DMZ firewall rules
 On host machine save the following rules below to a `notepad` text document called `s2sdmz.txt`
 
 ---
-Run the following to transfer file to MidBrain
-
-*Select the document in file explorer and click `Copy Path` to get the absolute path*
-
+SCP DMZ rules onto the MidBrain
 ```bash
 scp C:\\PATH\TO\s2sdmz.txt root@192.168.1.1:/root
 ```
-![Star2Star DMZ SCP Command Example](/assets/s2s_dmz_scp.png)
 
+*Select the document in file explorer and click `Copy Path` to get the absolute path*
+> ![Copy Document Path](/assets/copy_path.png)
+
+*SCP example*
+> ![Star2Star DMZ SCP Command Example](/assets/s2s_dmz_scp.png)
+
+---
 SSH into the MidBrain and run the following commands:
 ```bash
 # Cat the DMZ rules into /etc/config/firewall.
