@@ -7,7 +7,9 @@ On host machine save the following rules below to a `notepad` text document call
 
 ---
 Run the following to transfer file to MidBrain
+
 *Select the document in file explorer and click `Copy Path` to get the absolute path*
+
 ```bash
 scp C:\\PATH\TO\s2sdmz.txt root@192.168.1.1:/root
 ```
